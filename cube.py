@@ -69,11 +69,11 @@ for r in range(200):
         square[x][1] = newy
         square[x][2] = newz
         try:
-            if int(zcartesian[50-round(apparenty)][50-round(newx)]) < round(newz):
-                zcartesian[50-round(apparenty)][50-round(newx)] = str(round(newz))
+            if float(zcartesian[50-round(apparenty)][50-round(newx)]) < newz:
+                zcartesian[50-round(apparenty)][50-round(newx)] = str(newz)
                 cartesian[50-round(apparenty)][50-round(newx)] = char
         except:
-            zcartesian[50-round(apparenty)][50-round(newx)] = str(round(newz))
+            zcartesian[50-round(apparenty)][50-round(newx)] = str(newz)
             cartesian[50-round(apparenty)][50-round(newx)] = char
     display()
     clear()
