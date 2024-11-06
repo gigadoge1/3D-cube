@@ -40,3 +40,11 @@ After running the code many frames like this will be printed creating an animati
 It's been a wonderful experience learning about all this stuff and I've really developed an interest in 3D graphics. I've only scratched its surface and there's so much to learn. There might be many things I could change in this program too. I haven't attempted to improve the quality of this program so there might be some changes that could improve this by a lot. Maybe there might be a change which could avoid some of the minor errors in the result. If maybe I've made some mistake in the program or maybe I'm wrong about something or there's something I could have done to make the program more efficient or any observation you've made at all, please do let me know. I'm an absolute beginner in this field and I'll continue learning and sharing some more projects of mine in the future :)
 
 Edit: Through a few very small and easy changes, I added cube2.py in which the cube spins around its own axis instead of revolving around a different fixed axis (which makes it do a yaw rotation). Basically I just shifted the origin to the center of the cube instead of in front of the cube.
+
+Another edit: I added another direction of rotation to cube2.py<br>
+Here's my derivation of the new coordinates:<br>
+![image](https://github.com/user-attachments/assets/5b465989-b7aa-4adc-a5c0-b3cfdd0ba276)
+
+# Result of cube2.py with rotation in 2 directions
+![image](https://github.com/user-attachments/assets/2d144c40-6bf5-4a05-96cc-5ca9985df809)<br><br>
+Again, many frames like this are printed to create an animation. Run this code in your command prompt/terminal to see it for yourself
