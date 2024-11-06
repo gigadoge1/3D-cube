@@ -13,7 +13,7 @@ Now I didn't use this diagram directly. Instead I tried to make a different type
 It's not very neat and there's not much explanation but yeah.
 
 # How can the 2D rotation matrix be derived
-Well if you look it up you'll probably see a different method used than what I'll be explaining here. The method I'm going to be explaining is the one I learnt from a book I had read(SMP advance mathematics, it's a really old book I got from my school library). So when you have any normal set of coordinates, say (x, y) in a unit circle, you can write it in the form of a matrix being multiplied by a vector. 
+Well if you look it up you'll probably see a different method used than what I'll be explaining here. The method I'm going to be explaining is the one I learnt from a book I had read(SMP advanced mathematics, it's a really old book I got from my school library). So when you have any normal set of coordinates, say (x, y) in a unit circle, you can write it in the form of a matrix being multiplied by a vector. 
 [1  0] [x]
 [0  1] [y]
 This is also called an identity matrix. Upon expanding it, it will give you the same x and y coordinates as before. Now you can also write it in another form:
