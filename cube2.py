@@ -58,9 +58,9 @@ for r in range(200):
         char = square[x][3]
         sinx = math.sin(math.radians(2.8125))
         cosx = math.cos(math.radians(2.8125))
-        newx = xcoord*cosx - zcoord*sinx
-        newy = ycoord
-        newz = xcoord*sinx + zcoord*cosx
+        newx = xcoord*cosx + ycoord*(sinx**2) - zcoord*sinx*cosx
+        newy = ycoord*cosx + zcoord*sinx
+        newz = xcoord*sinx - ycoord*sinx*cosx + zcoord*(cosx**2)
         if (100-newz) != 0:
             apparenty = (newy*(100))/(100-newz)
         else:
