@@ -43,24 +43,22 @@ def clear():
     for x in range(101):
         for y in range(101):
             cartesian[x][y] = " "
-clear()
-def clearz():
-    for x in range(101):
-        for y in range(101):
             zcartesian[x][y] = " "
-clearz()
+clear()
 
+sinx = math.sin(math.radians(2.8125))
+cosx = math.cos(math.radians(2.8125))
+sin2 = sinx**2
+cos2 = cosx**2
 for r in range(200):
     for x in range(len(square)):
         xcoord = square[x][0]
         ycoord = square[x][1]
         zcoord = square[x][2]
         char = square[x][3]
-        sinx = math.sin(math.radians(2.8125))
-        cosx = math.cos(math.radians(2.8125))
-        newx = xcoord*cosx + ycoord*(sinx**2) - zcoord*sinx*cosx
+        newx = xcoord*cosx + ycoord*(sin2) - zcoord*sinx*cosx
         newy = ycoord*cosx + zcoord*sinx
-        newz = xcoord*sinx - ycoord*sinx*cosx + zcoord*(cosx**2)
+        newz = xcoord*sinx - ycoord*sinx*cosx + zcoord*(cos2)
         if (100-newz) != 0:
             apparenty = (newy*(100))/(100-newz)
         else:
@@ -77,4 +75,3 @@ for r in range(200):
             cartesian[50-round(apparenty)][50-round(newx)] = char
     display()
     clear()
-    clearz()
