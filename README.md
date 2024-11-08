@@ -10,7 +10,7 @@ So after making the 2d rotating square, I wanted to make it 3D. I derived a 3d r
 <img width="479" alt="Screenshot" src="https://github.com/user-attachments/assets/24e64876-7739-4fc8-a5f8-6a72e402e48b"><br><br>
 Now I didn't use this diagram directly. Instead I tried to make a different type of diagram with similar thinking but later I realised it wasn't correct. So I used this thinking itself. If you don't know what I'm talking about you could check out donut.c's blog and scroll down to the part about perspective. So I wrote the code for everything and it still gave me problems. The reason is because my derivation of the 3d rotation matrix was slightly wrong and I realised that after looking it up on google. The thing is I used the same logic used in derivation of the 2D rotation matrix. Instead of XY plane I did it for the XZ' plane(because we're talking about the yaw rotation here) where Z' is the negative Z axis. I chose the negative z axis because the cube I made was in the XZ' region. It was towards the negative z axis. But this thinking was wrong. I was supposed to do it for the XZ plane and not the XZ' plane because the value of the trigonometric functions would be negative automatically when we feed it negative z values. Adding a few minuses to the trigonometric functions could end up giving you the wrong coordinates that you don't want. So I fixed it and derived it for the XZ plane and the program worked! Here's an image of my derivation:<br><br>
 ![image](https://github.com/user-attachments/assets/364e2e56-1b01-4beb-8ac3-551e01d5e0e7)<br>
-It's not very neat and there's not much explanation but yeah.
+It's not very neat and there's not much explanation but yeah. Also the direction of y and -y may be wrong but it doesn't affect the matrix.
 
 # How can the 2D rotation matrix be derived
 Well if you look it up you'll probably see a different method used than what I'll be explaining here. The method I'm going to be explaining is the one I learnt from a book I had read(SMP advanced mathematics, it's a really old book I got from my school library). So when you have any normal set of coordinates, say (x, y) in a unit circle, you can write it in the form of a matrix being multiplied by a vector. 
@@ -43,7 +43,8 @@ Edit: Through a few very small and easy changes, I added cube2.py in which the c
 
 Another edit: I added another direction of rotation to cube2.py<br>
 Here's my derivation of the new coordinates:<br>
-![image](https://github.com/user-attachments/assets/5b465989-b7aa-4adc-a5c0-b3cfdd0ba276)
+![image](https://github.com/user-attachments/assets/5b465989-b7aa-4adc-a5c0-b3cfdd0ba276)<br><br>
+Again, the direction of x and -x are wrong but it doesn't interfere with the matrix.
 
 # Result of cube2.py with rotation in 2 directions
 ![image](https://github.com/user-attachments/assets/2d144c40-6bf5-4a05-96cc-5ca9985df809)<br><br>
